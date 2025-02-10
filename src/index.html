@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      function go_get(){
+       var search_field = document.getElementById('yourtextfield').value;
+       var target_url = search_field;
+       var ifr = document.getElementById('youriframe');
+       window.open(target_url, '_blank').focus();
+       return false;
+      }
+      
+      </script> 
+      
+      <form onsubmit="go_get(); return false;" >
+       <input type="text" placeholder="https://search.brave.com/" id="yourtextfield"/>
+       <input type="submit" value="Go to Website" />
+       <p>Remember to include https:// or http://</p>
+      </form>
+  </body>
+</html>
